@@ -1,310 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vitrina U - Iniciar sesión</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrina U - Iniciar sesión</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      min-height: 100vh;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-      background: #101117;
-      color: #f1f3f8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Fondo decorativo */
-    body::before {
-      content: "";
-      position: fixed;
-      width: 500px;
-      height: 500px;
-      background: #2563eb;
-      opacity: 0.08;
-      filter: blur(130px);
-      top: -200px;
-      left: -150px;
-      pointer-events: none;
-    }
-
-    .login-container {
-      width: 100%;
-      max-width: 420px;
-      padding: 24px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 28px;
-    }
-
-    .logo-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 9px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #36c5d8, #2563eb);
-      color: #07111d;
-      font-size: 17px;
-      font-weight: 800;
-    }
-
-    .logo-text {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
-
-    .logo-text span {
-      color: #3974ff;
-    }
-
-    .login-card {
-      background: #191b24;
-      border: 1px solid #2b2f3d;
-      border-radius: 14px;
-      padding: 32px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    }
-
-    .login-card h1 {
-      font-size: 27px;
-      letter-spacing: -0.8px;
-      margin-bottom: 8px;
-    }
-
-    .subtitle {
-      color: #858b9d;
-      font-size: 14px;
-      line-height: 1.5;
-      margin-bottom: 28px;
-    }
-
-    .form-group {
-      margin-bottom: 18px;
-    }
-
-    label {
-      display: block;
-      color: #b8bdcb;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    input {
-      width: 100%;
-      height: 46px;
-      background: #11131a;
-      border: 1px solid #303442;
-      border-radius: 8px;
-      outline: none;
-      color: #fff;
-      font-size: 14px;
-      padding: 0 14px;
-      transition: 0.2s ease;
-    }
-
-    input::placeholder {
-      color: #555b6b;
-    }
-
-    input:focus {
-      border-color: #3974ff;
-      box-shadow: 0 0 0 3px rgba(57, 116, 255, 0.12);
-    }
-
-    .password-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .forgot {
-      color: #4c7fff;
-      font-size: 12px;
-      text-decoration: none;
-    }
-
-    .forgot:hover {
-      color: #72a0ff;
-    }
-
-    .login-button {
-      width: 100%;
-      height: 46px;
-      margin-top: 8px;
-      border: none;
-      border-radius: 8px;
-      background: #386fe5;
-      color: white;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
-
-    .login-button:hover {
-      background: #467cf1;
-      transform: translateY(-1px);
-    }
-
-    .divider {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 25px 0;
-      color: #555b6b;
-      font-size: 12px;
-    }
-
-    .divider::before,
-    .divider::after {
-      content: "";
-      height: 1px;
-      flex: 1;
-      background: #2c303c;
-    }
-
-    .register {
-      text-align: center;
-      color: #858b9d;
-      font-size: 13px;
-    }
-
-    .register a {
-      color: #4c7fff;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .register a:hover {
-      text-decoration: underline;
-    }
-
-    .message {
-      display: none;
-      margin-top: 15px;
-      padding: 10px 12px;
-      border-radius: 7px;
-      background: rgba(34, 197, 94, 0.08);
-      border: 1px solid rgba(34, 197, 94, 0.2);
-      color: #6ee7a0;
-      font-size: 13px;
-      text-align: center;
-    }
-
-    @media (max-width: 480px) {
-      .login-container {
-        padding: 18px;
-      }
-
-      .login-card {
-        padding: 25px 20px;
-      }
-    }
-  </style>
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
 
-  <main class="login-container">
+    <main class="login-container">
 
-    <div class="logo">
-      <div class="logo-icon">V</div>
-      <div class="logo-text">
-        Vitrina <span>·U</span>
-      </div>
-    </div>
+        <a href="vitrina.html" class="logo" style="text-decoration: none; color: inherit;">
+            <div class="logo-icon">V</div>
+            <div class="logo-text">
+                Vitrina <span>·U</span>
+            </div>
+        </a>
 
-    <section class="login-card">
+        <section class="login-card">
 
-      <h1>Bienvenido de nuevo</h1>
+            <h1>Bienvenido de nuevo</h1>
 
-      <p class="subtitle">
-        Inicia sesión para continuar con tus proyectos.
-      </p>
+            <p class="subtitle">
+                Inicia sesión para continuar con tus proyectos.
+            </p>
 
-      <form id="loginForm">
+            <form id="loginForm">
 
-        <div class="form-group">
-          <label for="email">Correo electrónico</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="tu@universidad.edu.co"
-            required
-          >
-        </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" placeholder="tu@universidad.edu.co" required>
+                </div>
 
-        <div class="form-group">
-          <div class="password-row">
-            <label for="password">Contraseña</label>
-            <a href="#" class="forgot">¿La olvidaste?</a>
-          </div>
+                <div class="form-group">
+                    <div class="password-row">
+                        <label for="password">Contraseña</label>
+                        <a href="#" class="forgot">¿La olvidaste?</a>
+                    </div>
 
-          <input
-            type="password"
-            id="password"
-            placeholder="••••••••"
-            required
-          >
-        </div>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
 
-        <button type="submit" class="login-button">
-          Iniciar sesión
-        </button>
+                <button type="submit" class="login-button" id="loginBtn">
+                    Iniciar sesión
+                </button>
 
-        <div class="message" id="message">
-          Inicio de sesión enviado correctamente.
-        </div>
+                <div class="message" id="message">
+                    Inicio de sesión enviado correctamente.
+                </div>
 
-      </form>
+            </form>
 
-      <div class="divider">o</div>
+            <div class="divider">o</div>
 
-      <p class="register">
-        ¿No tienes una cuenta?
-        <a href="#">Crear cuenta</a>
-      </p>
+            <p class="register">
+                ¿No tienes una cuenta?
+                <a href="#">Crear cuenta</a>
+            </p>
 
-    </section>
+        </section>
 
-  </main>
+    </main>
 
-  <script>
-   
-  const form = document.getElementById("loginForm");
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const message = document.getElementById('message');
+        const loginBtn = document.getElementById('loginBtn');
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
 
-    // Validación sencilla
-    if (email && password) {
-      window.location.href = "vitrina.html";
-    }
-  });
-</script>
+            if (!email || !password) return;
 
+            // Guardar datos de sesión simulada en el navegador
+            localStorage.setItem('sesion_iniciada', 'true');
+            localStorage.setItem('usuario_activo', email);
 
+            // Estado visual de carga y éxito
+            loginBtn.textContent = 'Iniciando sesión...';
+            loginBtn.disabled = true;
+            loginBtn.style.opacity = '0.85';
+            loginBtn.style.cursor = 'wait';
 
+            message.textContent = '¡Inicio de sesión exitoso! Redirigiendo a la vitrina...';
+            message.style.display = 'block';
+
+            // Redireccionar a vitrina.html
+            setTimeout(() => {
+                window.location.href = 'vitrina.html';
+            }, 800);
+        });
+    </script>
 </body>
+
 </html>
