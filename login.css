@@ -75,9 +75,10 @@ body::before {
 }
 
 .login-card h1 {
-    font-size: 27px;
+    font-size: 22px;
     letter-spacing: -0.8px;
     margin-bottom: 8px;
+    text-align: center;
 }
 
 .subtitle {
