@@ -59,7 +59,7 @@ jobs:
           # 📁 CARPETA ORIGEN: La carpeta de tu proyecto donde están tus archivos web.
           # Si tus archivos están dentro de la carpeta "src", déjalo en "./src/".
           # Si tus archivos están en la raíz del proyecto, cámbialo a "./".
-          local-dir: ./src/
+          local-dir: ./
           
           # 🌐 CARPETA DESTINO: La carpeta pública de tu servidor de hosting.
           # Para InfinityFree y cPanel siempre es "/htdocs/" o "/public_html/".
